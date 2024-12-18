@@ -1,0 +1,11 @@
+/* Footer styles */
+.footer {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-md);
+    margin-top: auto;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer p {
+    margin-bottom: 0;
+}

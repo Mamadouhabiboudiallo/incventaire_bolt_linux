@@ -1,0 +1,31 @@
+/* Dashboard specific styles */
+.gap-2 {
+    gap: var(--spacing-sm);
+}
+
+.dashboard-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.stat-card {
+    background-color: var(--bg-color);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.stat-card p {
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+.recent-section {
+    margin-bottom: var(--spacing-lg);
+}

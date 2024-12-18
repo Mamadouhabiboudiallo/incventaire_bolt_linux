@@ -1,0 +1,24 @@
+RewriteEngine On
+RewriteBase /project/
+
+# Redirect trailing slashes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Handle front controller pattern
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+
+# PHP Error Settings
+php_flag display_errors on
+php_value error_reporting E_ALL
+
+# Security Headers
+Header set X-Content-Type-Options "nosniff"
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+# CORS Headers
+Header set Access-Control-Allow-Origin "*"
